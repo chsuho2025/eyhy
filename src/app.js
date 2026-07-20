@@ -593,7 +593,7 @@ function renderThumbnail(article) {
   if (article.thumbnail) {
     return `<img src="${article.thumbnail}" alt="${article.thumbnailAlt}" width="800" height="800" />`;
   }
-  return `<div class="thumbnail-placeholder" role="img" aria-label="${escapeHtml(article.thumbnailAlt)}"><span>${escapeHtml(article.visualNumber)}</span><small>VISUAL</small></div>`;
+  return `<div class="thumbnail-placeholder" role="img" aria-label="${escapeHtml(article.thumbnailAlt)}"><span>${escapeHtml(article.caseNumber)}</span><small>CASE</small></div>`;
 }
 
 function renderTags(tags, modifier = "") {

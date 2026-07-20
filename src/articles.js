@@ -33,7 +33,7 @@ window.eyArticles = [
     readTime: "6분",
     highlights: ["정보의 정확성과 행동 권한을 별도로 확인해야 했습니다.", "대화를 오래 이어가는 것이 항상 도움은 아니었습니다"],
     annotations: [["실행 가능성", "AI가 말한 행동을 현재 시스템과 권한으로 실제 완료하고 결과까지 확인할 수 있는지를 뜻합니다."]],
-    visualNumber: "01",
+    caseNumber: "01",
     thumbnailAlt: "사내용 AI의 정보 안내와 실행 가능성 시각자료 자리",
     markdown: "content/posts/01-internal-work-ai-qa.md"
   },
@@ -70,7 +70,7 @@ window.eyArticles = [
     readTime: "5분",
     highlights: ["언제 답하지 않고 사람에게 넘길 것인가", "사람이 마지막에 확인한다는 문장만 추가한 것이 아닙니다"],
     annotations: [["RAG", "등록된 문서를 검색한 뒤 그 근거를 바탕으로 답변을 만드는 방식입니다."], ["Citation", "답변에 사용한 문서·섹션·버전과 시행일을 다시 확인할 수 있게 표시한 정보입니다."]],
-    visualNumber: "04",
+    caseNumber: "02",
     thumbnailAlt: "규정 기반 학원 상담 AI 시각자료 자리",
     markdown: "content/posts/02-academy-policy-ai.md"
   },
@@ -101,7 +101,7 @@ window.eyArticles = [
     readTime: "4분",
     highlights: ["이번 대화에 필요한 데이터", "최종 결과는 팬에게 자동 전송하지 않았습니다"],
     annotations: [["구조화 출력", "후속 처리와 검수가 가능하도록 자유문 대신 정해진 필드로 결과를 받는 방식입니다."]],
-    visualNumber: "07",
+    caseNumber: "03",
     thumbnailAlt: "팬 활동 데이터와 아티스트 최종 확인 시각자료 자리",
     markdown: "content/posts/03-berriz-gemini-api.md"
   },
@@ -125,7 +125,7 @@ window.eyArticles = [
     readTime: "5분",
     highlights: ["출처와 판단 이유를 함께 남겨야", "자동화할 수 있는 일과 사람이 확인해야 할 일"],
     annotations: [["발음사전", "텍스트 표기와 TTS가 읽어야 할 발음을 연결해 음악 고유명사의 오독을 줄이는 데이터입니다."]],
-    visualNumber: "10",
+    caseNumber: "04",
     thumbnailAlt: "음악 고유명사와 TTS 발음사전 시각자료 자리",
     markdown: "content/posts/04-music-tts-pronunciation.md"
   },
@@ -149,7 +149,7 @@ window.eyArticles = [
     readTime: "5분",
     highlights: ["원하는 결론보다 현재 데이터가 말할 수 있는 범위", "자동 수집 뒤에 관리자 검토를 남겼습니다"],
     annotations: [["대체 신호", "직접 측정하려는 데이터가 없을 때 관련 가능성이 있는 공개 지표를 제한적으로 사용하는 방식입니다."], ["Snapshot", "특정 날짜의 차트와 계산 결과를 보존해 변화를 다시 확인할 수 있게 한 기록입니다."]],
-    visualNumber: "13",
+    caseNumber: "05",
     thumbnailAlt: "Chart Republic 트렌드 차트 시각자료 자리",
     markdown: "content/posts/05-chart-republic.md"
   },
@@ -173,7 +173,7 @@ window.eyArticles = [
     readTime: "4분",
     highlights: ["취향보다 사용자가 말한 조건", "새 조건과 이전 조건을 함께 확인했습니다"],
     annotations: [["페르소나", "서로 다른 시간·활동·숙련도에서 실제로 나올 질문과 기대 결과를 설계하기 위한 사용자 유형입니다."]],
-    visualNumber: "16",
+    caseNumber: "06",
     thumbnailAlt: "다양한 음악 추천 사용자 페르소나 시각자료 자리",
     markdown: "content/posts/06-melon-playlist-qa.md"
   },
@@ -197,7 +197,7 @@ window.eyArticles = [
     readTime: "4분",
     highlights: ["목적에 맞게 찾고 필요한 부분을 바꿔 다시 실행", "8개월 동안 422개의 프롬프트 템플릿"],
     annotations: [["프롬프트 템플릿", "사용 목적과 바꿔 넣을 입력, 고정 조건과 기대 출력 형식을 구분한 재사용 단위입니다."]],
-    visualNumber: "19",
+    caseNumber: "07",
     thumbnailAlt: "프롬뱅크 프롬프트 카드 시각자료 자리",
     markdown: "content/posts/07-prombank.md"
   },
@@ -221,7 +221,7 @@ window.eyArticles = [
     readTime: "4분",
     highlights: ["의견을 쓰기 전에 담당자의 의도를 조사했습니다", "존중과 솔직한 의견은 반대가 아니었습니다"],
     annotations: [["Desktop Research", "관련 자료와 배경을 먼저 조사해 문제와 제안의 맥락을 만드는 리서치 방식입니다."]],
-    visualNumber: "22",
+    caseNumber: "08",
     thumbnailAlt: "온보딩 참여자와 담당자의 피드백 시각자료 자리",
     markdown: "content/posts/08-onboarding-improvement.md"
   },
@@ -245,7 +245,7 @@ window.eyArticles = [
     readTime: "6분",
     highlights: ["자동 생성보다 검토와 복구가 가능한 상태", "통제·복구 가능한 End-to-end Workflow"],
     annotations: [["비동기 렌더", "웹 요청과 무거운 영상 편집을 분리해 외부 워커가 작업을 가져가고 상태를 다시 기록하는 방식입니다."], ["mock", "실제 유료 API 호출 없이 화면과 상태 전환을 검증하기 위한 테스트 결과입니다."]],
-    visualNumber: "25",
+    caseNumber: "09",
     thumbnailAlt: "Antiframe AI 영상 제작 Workflow 시각자료 자리",
     markdown: "content/posts/09-antiframe.md"
   }

@@ -13,7 +13,7 @@ python3 -m http.server 4173
 ## 콘텐츠 교체
 
 - 게시글 원고: `content/posts/`의 글 1~9 Markdown 파일
-- 제목·태그·요약·시각자료 번호: `src/articles.js`
+- 제목·태그·요약·Case 번호: `src/articles.js`
 - 게시글 정보·강조·용어 설명: `src/articles.js`
 - 게시글 PDF 선택 화면: `index.html`의 `print-dialog`
 - 스타일: `src/styles.css`
@@ -32,3 +32,5 @@ python3 -m http.server 4173
 Vercel에서 별도 빌드 명령 없이 저장소 루트를 그대로 배포할 수 있습니다.
 
 `main` 브랜치에 푸시하면 연결된 Vercel 프로젝트가 자동으로 배포됩니다.
+
+본문에는 장식용 생성 이미지를 사용하지 않습니다. 설명상 필요한 단순 도표 7개만 `docs/IMAGE_PROMPTS_KO.md`의 프롬프트로 제작하며, 프롬뱅크와 온보딩 글은 생성 이미지를 사용하지 않습니다.
