@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffd43b" />
+    <meta
+      name="description"
+      content="현업의 문제를 데이터와 작동하는 AI Workflow로 직접 검증한 최수호의 EY한영 AI Center 지원 포트폴리오입니다."
+    />
+    <title>최수호 EY한영 AI Center 포트폴리오</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-ch.png?v=2" />
+    <link rel="preload" href="assets/fonts/Pretendard-Regular.subset.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/Pretendard-SemiBold.subset.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="src/styles.css?v=eyhy-1" />
+    <script src="src/articles.js?v=eyhy-1" defer></script>
+    <script src="src/app.js?v=eyhy-1" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문으로 바로가기</a>
+    <div class="reading-progress" aria-hidden="true"><span id="readingProgress"></span></div>
+
+    <header class="site-header" id="siteHeader">
+      <div class="header-inner">
+        <a class="brand" href="#home" aria-label="최수호 EY한영 AI Center 포트폴리오 홈">
+          <span>최수호 AI 포트폴리오</span>
+        </a>
+        <nav class="main-nav" aria-label="주요 메뉴">
+          <button class="print-button" id="openPrint" type="button">
+            게시글 요약본 PDF로 저장하기
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="home-view" id="homeView" aria-labelledby="homeTitle">
+        <div class="hero wrap">
+          <h1 id="homeTitle">EY한영 AI Center 포트폴리오</h1>
+          <p class="hero-description">
+            상상에서 멈추지 않고, 현업의 문제를 데이터와 작동하는 AI Workflow로<br class="desktop-only" />
+            직접 검증해 온 프로젝트와 업무 경험을 기록했습니다.
+          </p>
+        </div>
+
+        <section class="articles-section wrap" aria-labelledby="articlesTitle">
+          <div class="section-heading">
+            <div>
+              <h2 id="articlesTitle">게시글 목록</h2>
+            </div>
+            <p>9개의 게시글</p>
+          </div>
+          <div class="article-list" id="articleList"></div>
+        </section>
+      </section>
+
+      <article class="article-view" id="articleView" aria-live="polite" hidden></article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner wrap">
+        <a class="brand footer-brand" href="#home">최수호 EY한영 AI Center 포트폴리오</a>
+        <div class="footer-contact">
+          <span>2026년 7월 업데이트</span>
+        </div>
+      </div>
+    </footer>
+
+    <dialog class="print-dialog" id="printDialog" aria-labelledby="printTitle">
+      <div class="dialog-header">
+        <div>
+          <p class="section-label">PDF</p>
+          <h2 id="printTitle">게시글 요약본 PDF로 저장하기</h2>
+        </div>
+        <button class="close-button" id="closePrint" type="button" aria-label="인쇄 창 닫기">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+        </button>
+      </div>
+      <div class="print-dialog-body">
+        <p class="print-description">PDF에 담을 게시글 요약본을 선택해 주세요. 원문 대신 핵심 정보와 대표 사례를 포함한 상세 요약이 저장됩니다.</p>
+        <div class="print-toolbar">
+          <p id="printSelectionStatus" aria-live="polite"></p>
+          <button class="text-button" id="toggleAllPrint" type="button">전체 선택</button>
+        </div>
+        <fieldset class="print-options">
+          <legend class="sr-only">인쇄할 게시글 선택</legend>
+          <div id="printOptions"></div>
+        </fieldset>
+        <div class="print-actions">
+          <button class="secondary-button" id="cancelPrint" type="button">취소</button>
+          <button class="primary-button" id="printSelected" type="button">선택한 요약본 PDF로 저장</button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="summary-dialog" id="summaryDialog" aria-labelledby="summaryTitle">
+      <div class="summary-dialog-shell">
+        <header class="summary-dialog-header">
+          <div>
+            <p class="summary-dialog-kicker">게시글 핵심 요약</p>
+            <h2 id="summaryTitle"></h2>
+          </div>
+          <button class="close-button" id="closeSummary" type="button" aria-label="요약 창 닫기">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+          </button>
+        </header>
+        <div class="summary-dialog-body" id="summaryDialogBody"></div>
+      </div>
+    </dialog>
+
+    <div class="print-view" id="printView" aria-hidden="true"></div>
+  </body>
+</html>
