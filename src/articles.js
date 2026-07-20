@@ -1,3 +1,30 @@
+window.eyVisuals = {
+  "01": {
+    src: "assets/figures/visual-01.png",
+    alt: "사내용 AI가 정보 문의와 실행 요청을 구분해 처리하는 흐름도"
+  },
+  "02": {
+    src: "assets/figures/visual-02.png",
+    alt: "규정 검색부터 업무 분기와 사람 평가까지 이어지는 상담 AI 운영 흐름도"
+  },
+  "04": {
+    src: "assets/figures/visual-04.png",
+    alt: "TTS 발음 후보를 조사해 자동화 후보와 사람 검토 대상으로 나누는 흐름도"
+  },
+  "05": {
+    src: "assets/figures/visual-05.png",
+    alt: "공개 음악 신호를 정규화하고 검토해 TOP 25로 발행하는 흐름도"
+  },
+  "06": {
+    src: "assets/figures/visual-06.png",
+    alt: "사용 조건을 조합한 47개 페르소나로 AI 결과를 평가하는 흐름도"
+  },
+  "07": {
+    src: "assets/figures/visual-07.png",
+    alt: "대본 구조화부터 생성, 검토, 렌더와 최종 영상까지 이어지는 흐름도"
+  }
+};
+
 window.eyArticles = [
   {
     slug: "internal-work-ai-qa",
@@ -29,12 +56,13 @@ window.eyArticles = [
         }
       ]
     },
-    characterCount: "4,248",
+    characterCount: "4,113",
     readTime: "6분",
     highlights: ["정보의 정확성과 행동 권한을 별도로 확인해야 했습니다.", "대화를 오래 이어가는 것이 항상 도움은 아니었습니다"],
     annotations: [["실행 가능성", "AI가 말한 행동을 현재 시스템과 권한으로 실제 완료하고 결과까지 확인할 수 있는지를 뜻합니다."]],
     caseNumber: "01",
-    thumbnailAlt: "사내용 AI의 정보 안내와 실행 가능성 시각자료 자리",
+    thumbnail: "assets/thumbnails/ey-01-internal-ai.jpg",
+    thumbnailAlt: "연한 파란색 돋보기 모양의 3D 아이콘",
     markdown: "content/posts/01-internal-work-ai-qa.md"
   },
   {
@@ -66,12 +94,13 @@ window.eyArticles = [
         }
       ]
     },
-    characterCount: "3,941",
+    characterCount: "3,795",
     readTime: "5분",
     highlights: ["언제 답하지 않고 사람에게 넘길 것인가", "사람이 마지막에 확인한다는 문장만 추가한 것이 아닙니다"],
     annotations: [["RAG", "등록된 문서를 검색한 뒤 그 근거를 바탕으로 답변을 만드는 방식입니다."], ["Citation", "답변에 사용한 문서·섹션·버전과 시행일을 다시 확인할 수 있게 표시한 정보입니다."]],
     caseNumber: "02",
-    thumbnailAlt: "규정 기반 학원 상담 AI 시각자료 자리",
+    thumbnail: "assets/thumbnails/ey-02-academy-ai.jpg",
+    thumbnailAlt: "흰색과 파란색 대화 말풍선 모양의 3D 아이콘",
     markdown: "content/posts/02-academy-policy-ai.md"
   },
   {
@@ -97,12 +126,13 @@ window.eyArticles = [
         }
       ]
     },
-    characterCount: "3,174",
+    characterCount: "3,045",
     readTime: "4분",
     highlights: ["이번 대화에 필요한 데이터", "최종 결과는 팬에게 자동 전송하지 않았습니다"],
     annotations: [["구조화 출력", "후속 처리와 검수가 가능하도록 자유문 대신 정해진 필드로 결과를 받는 방식입니다."]],
     caseNumber: "03",
-    thumbnailAlt: "팬 활동 데이터와 아티스트 최종 확인 시각자료 자리",
+    thumbnail: "assets/thumbnails/ey-03-berriz.jpg",
+    thumbnailAlt: "분홍색과 보라색 하트 모양의 3D 아이콘",
     markdown: "content/posts/03-berriz-gemini-api.md"
   },
   {
@@ -121,12 +151,13 @@ window.eyArticles = [
         { heading: "자동화와 사람 검토의 경계", paragraphs: ["반복되는 클래식 표기는 규칙 기반 후보 생성이 가능했지만 숫자와 철자를 의도적으로 조합한 이름은 공개 자료와 사람 검토가 필요했습니다. 등록 뒤에는 단어가 아닌 실제 추천 문장으로 발음과 호흡을 확인했습니다."] }
       ]
     },
-    characterCount: "3,465",
+    characterCount: "3,326",
     readTime: "5분",
     highlights: ["출처와 판단 이유를 함께 남겨야", "자동화할 수 있는 일과 사람이 확인해야 할 일"],
     annotations: [["발음사전", "텍스트 표기와 TTS가 읽어야 할 발음을 연결해 음악 고유명사의 오독을 줄이는 데이터입니다."]],
     caseNumber: "04",
-    thumbnailAlt: "음악 고유명사와 TTS 발음사전 시각자료 자리",
+    thumbnail: "assets/thumbnails/ey-04-tts-data.jpg",
+    thumbnailAlt: "크림색 페이지와 청록색 표지의 펼친 책 3D 아이콘",
     markdown: "content/posts/04-music-tts-pronunciation.md"
   },
   {
@@ -145,12 +176,13 @@ window.eyArticles = [
         { heading: "수집부터 발행까지의 운영", paragraphs: ["곡 ID와 제목·아티스트를 정규화하고 출처별 점수를 계산한 뒤 Snapshot으로 변화를 보존했습니다. 동명이곡과 잘못된 이미지는 관리자 화면과 검증 스크립트로 다시 확인했습니다."] }
       ]
     },
-    characterCount: "3,226",
+    characterCount: "3,074",
     readTime: "5분",
     highlights: ["원하는 결론보다 현재 데이터가 말할 수 있는 범위", "자동 수집 뒤에 관리자 검토를 남겼습니다"],
     annotations: [["대체 신호", "직접 측정하려는 데이터가 없을 때 관련 가능성이 있는 공개 지표를 제한적으로 사용하는 방식입니다."], ["Snapshot", "특정 날짜의 차트와 계산 결과를 보존해 변화를 다시 확인할 수 있게 한 기록입니다."]],
     caseNumber: "05",
-    thumbnailAlt: "Chart Republic 트렌드 차트 시각자료 자리",
+    thumbnail: "assets/thumbnails/ey-05-chart-republic.jpg",
+    thumbnailAlt: "상승 곡선이 결합된 파스텔 막대 차트 3D 아이콘",
     markdown: "content/posts/05-chart-republic.md"
   },
   {
@@ -169,12 +201,13 @@ window.eyArticles = [
         { heading: "취향 대신 명시 조건으로 평가", paragraphs: ["추천곡이 개인적으로 마음에 드는지보다 사용자가 말한 시간·활동·분위기·제외 조건을 기준으로 봤습니다. 후속 대화에서는 유지할 조건, 새 조건과 제거한 조건을 구분했습니다."], examples: [{ title: "복합 조건", lines: [["첫 요청", "새벽 배송하면서 졸리지 않게 들을 플리"], ["후속 요청", "너무 시끄러운 곡은 제외"], ["확인", "집중 유지와 높은 자극 제외가 함께 남는가"]] }] }
       ]
     },
-    characterCount: "3,197",
+    characterCount: "3,035",
     readTime: "4분",
     highlights: ["취향보다 사용자가 말한 조건", "새 조건과 이전 조건을 함께 확인했습니다"],
     annotations: [["페르소나", "서로 다른 시간·활동·숙련도에서 실제로 나올 질문과 기대 결과를 설계하기 위한 사용자 유형입니다."]],
     caseNumber: "06",
-    thumbnailAlt: "다양한 음악 추천 사용자 페르소나 시각자료 자리",
+    thumbnail: "assets/thumbnails/ey-06-playlist-qa.jpg",
+    thumbnailAlt: "연두색 음표와 음반 모양의 3D 아이콘",
     markdown: "content/posts/06-melon-playlist-qa.md"
   },
   {
@@ -187,18 +220,19 @@ window.eyArticles = [
     summary: {
       project: "목적별 생성형 AI 프롬프트를 공유하는 개인 서비스 프롬뱅크",
       problem: "한 번 잘 작동한 프롬프트도 사용 상황과 바꿔 넣을 정보를 알 수 없으면 다른 사람이 재사용하기 어려웠습니다.",
-      response: "공유 플랫폼을 제작·운영하며 422개의 프롬프트 템플릿을 축적했습니다. 세부 기여 범위와 사용자 효과는 원본 자료 확인 뒤 확정합니다.",
+      response: "공유 플랫폼을 직접 제작·운영하며 422개의 프롬프트 템플릿을 축적했습니다. 사용자 수나 업무 효과를 결과로 확대하지 않고 제작·운영 사실과 축적 규모를 구분했습니다.",
       sections: [
         { heading: "개인적인 관심을 서비스로", paragraphs: ["흩어진 프롬프트를 목적에 맞게 찾고 필요한 부분을 바꿔 다시 실행할 수 있는 공간을 직접 만들었습니다. 한 번 만든 뒤 끝내지 않고 8개월 동안 콘텐츠를 운영했습니다."] },
-        { heading: "현재 확인한 범위", paragraphs: ["8개월 운영과 422개 템플릿은 확인했지만 사용자 수, 재방문과 업무 효과는 아직 사용하지 않습니다. 공개 전 서비스 화면과 본인의 기획·개발·운영 역할을 원본 자료로 확정합니다."] }
+        { heading: "성과와 효과를 구분", paragraphs: ["8개월 운영과 422개 템플릿은 실행의 지속성과 축적 규모를 보여줍니다. 사용자 수, 재방문율과 업무 효과는 측정하지 않았으므로 성과로 제시하지 않습니다."] }
       ]
     },
-    characterCount: "2,870",
+    characterCount: "2,438",
     readTime: "4분",
     highlights: ["목적에 맞게 찾고 필요한 부분을 바꿔 다시 실행", "8개월 동안 422개의 프롬프트 템플릿"],
     annotations: [["프롬프트 템플릿", "사용 목적과 바꿔 넣을 입력, 고정 조건과 기대 출력 형식을 구분한 재사용 단위입니다."]],
     caseNumber: "07",
-    thumbnailAlt: "프롬뱅크 프롬프트 카드 시각자료 자리",
+    thumbnail: "assets/thumbnails/ey-07-prombank.jpg",
+    thumbnailAlt: "보라색과 파란색의 겹친 카드와 분홍색 반짝이 3D 아이콘",
     markdown: "content/posts/07-prombank.md"
   },
   {
@@ -217,12 +251,13 @@ window.eyArticles = [
         { heading: "존중과 솔직한 의견", paragraphs: ["상대의 노력을 이해하는 것과 문제를 말하는 것은 반대가 아니었습니다. 관찰한 차이를 근거와 함께 전달했고, 상세한 설문은 성장문화팀과의 추가 인터뷰와 개선 논의로 이어졌습니다."] }
       ]
     },
-    characterCount: "2,528",
+    characterCount: "2,174",
     readTime: "4분",
     highlights: ["의견을 쓰기 전에 담당자의 의도를 조사했습니다", "존중과 솔직한 의견은 반대가 아니었습니다"],
     annotations: [["Desktop Research", "관련 자료와 배경을 먼저 조사해 문제와 제안의 맥락을 만드는 리서치 방식입니다."]],
     caseNumber: "08",
-    thumbnailAlt: "온보딩 참여자와 담당자의 피드백 시각자료 자리",
+    thumbnail: "assets/thumbnails/ey-08-onboarding.jpg",
+    thumbnailAlt: "파란색 문을 통과하는 노란색 화살표 3D 아이콘",
     markdown: "content/posts/08-onboarding-improvement.md"
   },
   {
@@ -241,12 +276,13 @@ window.eyArticles = [
         { heading: "통제·복구 가능한 Workflow", paragraphs: ["Gemini, OpenAI TTS·Image, Pexels와 Kling을 단계별로 연결하고 결과를 프로젝트·장면 단위로 저장했습니다. Supabase의 렌더 큐와 Mac mini·After Effects 워커로 최종 MP4까지 연결하고 실패 기록과 재시도를 남겼습니다."] }
       ]
     },
-    characterCount: "4,457",
+    characterCount: "4,251",
     readTime: "6분",
     highlights: ["자동 생성보다 검토와 복구가 가능한 상태", "통제·복구 가능한 End-to-end Workflow"],
     annotations: [["비동기 렌더", "웹 요청과 무거운 영상 편집을 분리해 외부 워커가 작업을 가져가고 상태를 다시 기록하는 방식입니다."], ["mock", "실제 유료 API 호출 없이 화면과 상태 전환을 검증하기 위한 테스트 결과입니다."]],
     caseNumber: "09",
-    thumbnailAlt: "Antiframe AI 영상 제작 Workflow 시각자료 자리",
+    thumbnail: "assets/thumbnails/ey-09-antiframe.jpg",
+    thumbnailAlt: "재생 버튼이 결합된 파란색 클랩보드 3D 아이콘",
     markdown: "content/posts/09-antiframe.md"
   }
 ];

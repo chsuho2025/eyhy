@@ -767,7 +767,12 @@ function parseBlocks(lines) {
       const visualNumber = quoteLines.join(" ").match(/시각자료\s+(\d{2})/);
       if (visualNumber) {
         const description = quoteLines.at(-1).replace(/\*\*/g, "").trim();
-        html.push(`<figure class="visual-placeholder"><span>시각자료 ${visualNumber[1]}</span><p>${escapeHtml(description)}</p></figure>`);
+        const visual = window.eyVisuals?.[visualNumber[1]];
+        if (visual) {
+          html.push(`<figure class="article-figure visual-diagram"><img src="${escapeHtml(visual.src)}" alt="${escapeHtml(visual.alt)}"><figcaption>${escapeHtml(description)}</figcaption></figure>`);
+        } else {
+          html.push(`<figure class="visual-placeholder"><span>시각자료 ${visualNumber[1]}</span><p>${escapeHtml(description)}</p></figure>`);
+        }
       } else {
         html.push(`<blockquote>${parseBlocks(quoteLines)}</blockquote>`);
       }
