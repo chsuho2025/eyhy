@@ -127,6 +127,7 @@ button { color: inherit; }
 .article-figure figcaption { width: min(520px, 100%); margin: 14px auto 0; color: var(--soft); font-size: 12px; line-height: 1.65; text-align: center; }
 .visual-diagram img { width: 100%; box-shadow: none; }
 .visual-diagram figcaption { width: min(720px, 100%); }
+.project-screenshot img[src*="antiframe"] { width: 100%; }
 .visual-placeholder { display: grid; min-height: 360px; margin: 42px 0; padding: 32px; place-content: center; border: 1px solid var(--ink); border-radius: 18px; background: linear-gradient(145deg, #fffdf2, #f5f5f1); color: var(--ink); text-align: center; }
 .visual-placeholder span { font-size: 13px; font-weight: 700; letter-spacing: .03em; }
 .visual-placeholder p { max-width: 520px; margin: 12px 0 0; color: var(--muted); font-size: 14px; line-height: 1.65; }

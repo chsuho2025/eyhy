@@ -602,7 +602,7 @@ function renderTags(tags, modifier = "") {
 
 async function renderArticle(article) {
   const requestId = ++renderRequest;
-  document.title = `${article.title} — 최수호`;
+  document.title = `${article.title} — 포트폴리오 블로그`;
   articleView.innerHTML = `
     <header class="article-hero wrap">
       <div class="article-topline">
@@ -753,6 +753,14 @@ function parseBlocks(lines) {
     if (line.startsWith("```")) {
       flushParagraph(); flushList(); flushTable();
       inCode = true;
+      continue;
+    }
+
+    const imageMatch = line.trim().match(/^!\[([^\]]*)\]\(([^\s)]+)(?:\s+"([^"]*)")?\)$/);
+    if (imageMatch) {
+      flushParagraph(); flushList(); flushTable();
+      const [, alt, src, caption = ""] = imageMatch;
+      html.push(`<figure class="article-figure project-screenshot"><img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}"><figcaption>${escapeHtml(caption)}</figcaption></figure>`);
       continue;
     }
 
@@ -949,7 +957,7 @@ function prepareAndPrintArticles() {
     printView.innerHTML = selected.map((article) => `
       <article class="print-article" data-print-slug="${article.slug}">
         <header class="print-article-header">
-          <p>최수호 EY한영 AI Center 포트폴리오 · 게시글 핵심 요약</p>
+          <p>포트폴리오 블로그 · 게시글 핵심 요약</p>
           <h1>${article.title}</h1>
           <div>${article.period}</div>
         </header>
@@ -1010,7 +1018,7 @@ function route() {
     renderArticle(article);
   } else {
     renderRequest += 1;
-    document.title = "최수호 EY한영 AI Center 포트폴리오";
+    document.title = "포트폴리오 블로그";
   }
   window.scrollTo({ top: 0, behavior: "instant" });
   updateProgress();
