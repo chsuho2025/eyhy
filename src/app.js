@@ -575,7 +575,7 @@ let renderRequest = 0;
 function renderCards() {
   articleList.innerHTML = articles.map((article) => `
     <a class="article-card" href="#article/${article.slug}">
-      <div class="thumbnail-wrap">${renderThumbnail(article)}</div>
+      <div class="thumbnail-wrap">${renderThumbnail(article)}${renderRecommendationBadge(article)}</div>
       <div class="article-card-content">
         <h3>${article.title}</h3>
         <p class="article-excerpt">${article.excerpt}</p>
@@ -597,7 +597,15 @@ function renderThumbnail(article) {
 }
 
 function renderTags(tags, modifier = "") {
-  return `<div class="article-tags ${modifier}">${tags.map((tag) => `<span class="article-tag">${tag}</span>`).join("")}</div>`;
+  const visibleTags = tags.filter((tag) => !tag.startsWith("추천"));
+  return `<div class="article-tags ${modifier}">${visibleTags.map((tag) => `<span class="article-tag">${tag}</span>`).join("")}</div>`;
+}
+
+function renderRecommendationBadge(article, modifier = "") {
+  const recommendation = article.tags.find((tag) => tag.startsWith("추천"));
+  return recommendation
+    ? `<span class="recommendation-badge ${modifier}" aria-label="${recommendation} 게시글">${recommendation}</span>`
+    : "";
 }
 
 async function renderArticle(article) {
@@ -607,6 +615,7 @@ async function renderArticle(article) {
     <header class="article-hero wrap">
       <div class="article-topline">
         <a class="back-link" href="#home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m5-5-5 5 5 5" /></svg>모든 게시글</a>
+        ${renderRecommendationBadge(article, "recommendation-badge--hero")}
         ${renderTags(article.tags, "article-tags--hero")}
       </div>
       <h1>${article.title}</h1>
@@ -991,7 +1000,7 @@ function nextArticleLink(article) {
   const next = articles[(index + 1) % articles.length];
   return `
     <a class="article-card article-card--next" href="#article/${next.slug}">
-      <div class="thumbnail-wrap">${renderThumbnail(next)}</div>
+      <div class="thumbnail-wrap">${renderThumbnail(next)}${renderRecommendationBadge(next)}</div>
       <div class="article-card-content">
         <h3>${next.title}</h3>
         <p class="article-excerpt">${next.excerpt}</p>

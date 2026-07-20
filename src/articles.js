@@ -98,9 +98,9 @@ window.eyArticles = [
         }
       ]
     },
-    characterCount: "3,925",
+    characterCount: "3,904",
     readTime: "5분",
-    highlights: ["언제 답하지 않고 사람에게 넘길 것인가", "사람이 마지막에 확인한다는 문장만 추가한 것이 아닙니다"],
+    highlights: ["언제 답하지 않고 사람에게 넘길 것인가", "사용 근거·이관 이유·다음 조치를 함께 전달했습니다"],
     annotations: [["RAG", "등록된 문서를 검색한 뒤 그 근거를 바탕으로 답변을 만드는 방식입니다."], ["Citation", "답변에 사용한 문서·섹션·버전과 시행일을 다시 확인할 수 있게 표시한 정보입니다."]],
     caseNumber: "02",
     thumbnail: "assets/thumbnails/ey-02-academy-ai.jpg",
@@ -242,8 +242,8 @@ window.eyArticles = [
   {
     slug: "onboarding-improvement",
     tags: ["Working Style", "Desktop Research", "피드백", "협업"],
-    title: "좋은 피드백은 상대의 의도를 이해하는 것에서 시작됐습니다",
-    excerpt: "입사 온보딩을 평가하면서 불편 사항만 나열하지 않고 담당자가 프로그램을 구성한 의도와 실제 경험의 차이를 조사했습니다. 구체적인 설문은 추가 인터뷰와 개선 논의로 이어졌습니다.",
+    title: "담당자의 의도를 조사해 온보딩 개선 인터뷰로 이어간 과정",
+    excerpt: "입사 온보딩의 설계 의도와 실제 경험의 차이를 조사했습니다. 조사 내용을 구체적인 상황과 개선 방향으로 구조화한 설문은 성장문화팀과의 추가 인터뷰로 이어졌습니다.",
     date: "2026. 07. 20",
     period: "2025.06 ~ 2025.07",
     summary: {
@@ -255,7 +255,7 @@ window.eyArticles = [
         { heading: "존중과 솔직한 의견", paragraphs: ["상대의 노력을 이해하는 것과 문제를 말하는 것은 반대가 아니었습니다. 관찰한 차이를 근거와 함께 전달했고, 상세한 설문은 성장문화팀과의 추가 인터뷰와 개선 논의로 이어졌습니다."] }
       ]
     },
-    characterCount: "1,973",
+    characterCount: "1,965",
     readTime: "4분",
     highlights: ["의견을 쓰기 전에 담당자의 의도를 조사했습니다", "존중과 솔직한 의견은 반대가 아니었습니다"],
     annotations: [["Desktop Research", "관련 자료와 배경을 먼저 조사해 문제와 제안의 맥락을 만드는 리서치 방식입니다."]],

@@ -100,7 +100,7 @@ OpenAI와 Supabase 환경변수가 있으면 질문 Embedding을 생성하고 pg
 
 관리자 화면에서는 Correctness, Groundedness, Safety, Helpfulness와 Completeness를 사람이 평가할 수 있습니다. 대시보드에는 담당자 검토 건수, 검색 실패, Citation 누락과 낮은 Groundedness를 표시했습니다.
 
-사람이 마지막에 확인한다는 문장만 추가한 것이 아닙니다. 담당자가 어떤 근거와 이유를 확인해야 하는지까지 전달하도록 응답과 로그 구조를 함께 만들었습니다.
+담당자가 무엇을 확인해야 하는지 알 수 있도록 사용 근거, 이관 이유와 다음 조치를 응답과 로그에 함께 전달했습니다.
 
 ![고정 질문별 정확성·안전성·출처 일치를 확인하는 품질 검증 화면](assets/screenshots/academy-05-evaluation.jpg "과잉 거절을 수정한 뒤 고정 질문을 다시 실행하고 평가 기준별 결과를 확인했습니다.")
 

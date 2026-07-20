@@ -66,6 +66,7 @@ button { color: inherit; }
 .article-card:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
 .thumbnail-wrap { position: relative; aspect-ratio: 1; overflow: hidden; border: 1px solid #e5e5df; border-radius: 14px; background: white; }
 .thumbnail-wrap img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+.recommendation-badge { position: absolute; z-index: 3; top: 12px; left: 12px; display: inline-flex; min-height: 27px; box-sizing: border-box; align-items: center; justify-content: center; padding: 1px 11px 0; border: 1px solid var(--ink); border-radius: 999px; background: var(--ink); box-shadow: 0 4px 0 rgba(0, 0, 0, .16); color: var(--yellow); font-size: 11px; font-weight: 800; letter-spacing: -.01em; line-height: 1; transform: rotate(-3deg); }
 .thumbnail-placeholder { display: grid; width: 100%; height: 100%; place-content: center; background: linear-gradient(145deg, #fffdf2 0%, #f5f5f1 68%, #fff1a8 100%); color: var(--ink); text-align: center; }
 .thumbnail-placeholder span { font-size: clamp(34px, 5vw, 72px); font-weight: 700; letter-spacing: -.055em; line-height: 1; }
 .thumbnail-placeholder small { margin-top: 10px; color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: .18em; }
@@ -90,6 +91,7 @@ button { color: inherit; }
 .is-article .article-end a:hover { transform: none; }
 .article-hero { max-width: 880px; padding-top: 58px; padding-bottom: 70px; }
 .article-topline { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-bottom: 52px; }
+.recommendation-badge--hero { position: static; min-height: 29px; padding-inline: 12px; }
 .back-link { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 7px; margin: 0; color: var(--muted); font-size: 14px; font-weight: 600; }
 .back-link:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--yellow-strong); text-decoration-thickness: 3px; text-underline-offset: 4px; }
 .article-tags--hero .article-tag { height: 27px; padding-inline: 11px; }
@@ -266,6 +268,7 @@ button { color: inherit; }
   .article-card { grid-template-columns: 104px minmax(0, 1fr); gap: 0; padding: 13px 9px; border-radius: 16px; }
   .article-list .article-card:not(:last-child)::after { right: 9px; left: 9px; }
   .thumbnail-wrap { border-radius: 11px; }
+  .recommendation-badge { top: 7px; left: 7px; min-height: 21px; padding: 1px 7px 0; box-shadow: 0 3px 0 rgba(0, 0, 0, .14); font-size: 8px; }
   .thumbnail-placeholder span { font-size: 30px; }
   .thumbnail-placeholder small { margin-top: 6px; font-size: 7px; }
   .article-card-content { min-height: 104px; padding: 2px 4px 2px 13px; }
@@ -281,6 +284,7 @@ button { color: inherit; }
   .card-arrow { display: none; }
   .article-hero { padding-top: 38px; padding-bottom: 62px; }
   .article-topline { gap: 10px; margin-bottom: 46px; }
+  .recommendation-badge--hero { min-height: 25px; padding-inline: 10px; font-size: 9px; }
   .back-link { font-size: 13px; }
   .article-tags--hero .article-tag { height: 24px; padding-inline: 9px; font-size: 9px; }
   .article-hero h1 { font-size: 40px; }
